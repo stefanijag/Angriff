@@ -14,11 +14,12 @@
 		modelAttribute="project">
 		<fieldset id="createProjectFieldset">
 			<h3 id="titleCreateProject">Add New Project</h3>
+			<jsp:include page="../error/error.jsp"/>
 			<form:label for="projectName" path="projectName" id="labelProjectName">Project Name*: </form:label>
 			<form:input type="text" name="projectName" path="projectName" id="inputProjectName" /><br>
 			<form:label for="releaseDate" path="releaseDate" id="labelReleaseDate">Release Date*: </form:label>
-			<form:input type="text" id="inputReleaseDate" name="releaseDate"
-				path="releaseDate" />
+			<form:input type="date" id="inputReleaseDate" name="releaseDate"
+				path="releaseDate"/>
 			<br>
 			<form:label for="description" path="description" id="labelDescription">Description*: </form:label>
 			<form:input type="text" name="description" path="description" id="inputDescription" /><br>		

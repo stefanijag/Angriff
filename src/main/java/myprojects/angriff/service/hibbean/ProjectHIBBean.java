@@ -9,7 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "USER")
+@Table(name = "PROJECT")
 public class ProjectHIBBean {
 	@Id
 	@GeneratedValue
@@ -21,28 +21,45 @@ public class ProjectHIBBean {
 	private Date releaseDate;
 	@Column(name = "DESCRIPTION")
 	private String description;
-	
+
+	public ProjectHIBBean() {
+
+	}
+
+	public ProjectHIBBean(String projectName, Date releaseDate, String description) {
+		this.projectName = projectName;
+		this.releaseDate = releaseDate;
+		this.description = description;
+	}
+
 	public Long getProjectId() {
 		return projectId;
 	}
+
 	public void setProjectId(Long projectId) {
 		this.projectId = projectId;
 	}
+
 	public String getProjectName() {
 		return projectName;
 	}
+
 	public void setProjectName(String projectName) {
 		this.projectName = projectName;
 	}
+
 	public Date getReleaseDate() {
 		return releaseDate;
 	}
+
 	public void setReleaseDate(Date releaseDate) {
 		this.releaseDate = releaseDate;
 	}
+
 	public String getDescription() {
 		return description;
 	}
+
 	public void setDescription(String description) {
 		this.description = description;
 	}
