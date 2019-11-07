@@ -1,5 +1,8 @@
 package myprojects.angriff.service;
 
-public class ApiService {
+import myprojects.angriff.service.hibbean.LoginHIBBean;
 
+public interface ApiService {
+
+	int register(LoginHIBBean registrationValue);
 }

@@ -23,6 +23,25 @@ public class LoginHIBBean {
 	private String name;
 	@Column(name = "LASTNAME")
 	private String lastname;
+	@Column(name = "ROLE")
+	private String role ="US";
+	
+	public LoginHIBBean() {
+		
+	}
+	
+	public LoginHIBBean(String username, String password) {
+		this.username = username;
+		this.password = password;
+	}
+	
+	public LoginHIBBean(String username, String password, String email, String name, String lastname) {
+		this.username = username;
+		this.password = password;
+		this.email = email;
+		this.name = name;
+		this.lastname = lastname;
+	}
 
 	public Long getLoginId() {
 		return loginId;
@@ -70,6 +89,14 @@ public class LoginHIBBean {
 
 	public void setLastname(String lastname) {
 		this.lastname = lastname;
+	}
+
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
 	}
 
 }

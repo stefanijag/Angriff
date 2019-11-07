@@ -9,7 +9,7 @@
 <link href="/resources/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-	<form:form method="post" action="/register/submit"
+	<form:form method="get" action="/register/submit"
 		modelAttribute="register">
 		<fieldset id="registerFieldset">
 			<h3 id="titleRegister">Register</h3>
