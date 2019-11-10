@@ -17,6 +17,14 @@ import myprojects.angriff.service.bean.LoginBean;
 import myprojects.angriff.service.bean.RegisterUIBean;
 import myprojects.angriff.service.hibbean.LoginHIBBean;
 
+/**
+ * the controller for all views for the login and registration attack version
+ * 
+ * M183: Project collector
+ * 
+ * @author Kristina Klincov, Stefanija Gojkovic
+ * @version 1.1
+ */
 @Controller
 public class LoginController {
 	
@@ -42,7 +50,7 @@ public class LoginController {
 			return new ModelAndView("/login/viewLogin");
 		}else if(role.equals("AD")) {
 			LOGGER.info("Successfully logged in as an admin");
-			return new ModelAndView("/project/overviewProject");
+			return new ModelAndView("/project/overviewProjectAdmin");
 		}
 		LOGGER.info("Successfully logged in as an user");
 		return new ModelAndView("/project/overviewProject");

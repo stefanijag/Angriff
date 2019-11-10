@@ -30,7 +30,6 @@ li a {
 
 #menuLogout {
 	float: right;
-	padding: 14px 16px;
 }
 
 .menu li {
@@ -63,7 +62,7 @@ li a {
 }
 
 #inputPassword {
-	margin-left: 12%;
+	margin-left: 13%;
 }
 
 #inputName {

@@ -12,7 +12,14 @@ import org.slf4j.LoggerFactory;
 
 import myprojects.angriff.service.api.ApiPersistenceAPI;
 import myprojects.angriff.service.hibbean.LoginHIBBean;
-
+/**
+ * Implementation for all needed database statements database level attack version
+ * 
+ * M183: Project collector
+ * 
+ * @author Kristina Klincov, Stefanija Gojkovic
+ * @version 1.1
+ */
 public class ApiPersistenceDBImpl implements ApiPersistenceAPI{
 	
 	private static final Logger LOGGER = LoggerFactory.getLogger(ApiPersistenceDBImpl.class);
@@ -20,7 +27,6 @@ public class ApiPersistenceDBImpl implements ApiPersistenceAPI{
 	private String driver = "com.mysql.cj.jdbc.Driver";
 	private String username ="root";
 	private String password= "b77ITm0d"; 
-	private int id=5;
 	
 	@Override
 	public void register(LoginHIBBean registrationValue) {
@@ -31,11 +37,10 @@ public class ApiPersistenceDBImpl implements ApiPersistenceAPI{
 			
 			Statement stmt = connection.createStatement();
 			String query = "INSERT INTO Aplik.user (id, email, lastname, name, password, role, username) "
-					+ "VALUES (" + id + ", '" + registrationValue.getEmail() + "', '" + registrationValue.getLastname() + "', '" 
+					+ "VALUES (" + registrationValue.getLoginId() + ", '" + registrationValue.getEmail() + "', '" + registrationValue.getLastname() + "', '" 
 					+ registrationValue.getName() + "', '" + registrationValue.getPassword() + "', '" + registrationValue.getRole()
 					+ "', '" + registrationValue.getUsername() +"')";
 			stmt.executeUpdate(query);
-			id++;
 			connection.close();
 		} catch (InstantiationException | IllegalAccessException | ClassNotFoundException | SQLException e) {
 			LOGGER.error(e.getMessage(), e);

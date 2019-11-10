@@ -10,9 +10,11 @@
 <link href="/resources/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-	<div class="menu">
+		<div class="menu">
 		<ul>
-			<li><a href="../projectUser">Overview</a></li>
+			<li><a href="../projectAdmin">Overview</a></li>
+			<li><a href="../project">Projekt Hinzufügen</a></li>
+			<li><a href="../project/role">Rolen ändern</a></li>
 			<li id="menuLogout"><a href="../login">Log out</a></li>
 		</ul>
 	</div>
@@ -33,6 +35,9 @@
 				</tr>
 			</c:forEach>
 		</table>
+		<form action="/project">
+			<button id="buttonRedirect">Add Project</button>
+		</form>
 	</fieldset>
 </body>
 </html>

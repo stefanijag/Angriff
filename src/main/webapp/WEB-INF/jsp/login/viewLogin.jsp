@@ -17,7 +17,7 @@
 			<form:input type="text" name="username" path="username"
 				id="inputUsername" />
 			<br>
-			<form:label for="password" path="password" id="labelPassword">Password:
+			<form:label for="password" path="password" id="labelPassword">Passwort:
 			</form:label>
 			<form:input type="password" name="password" path="password"
 				id="inputPassword" />
